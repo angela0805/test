@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Masonry Layout</title>
+    <style>
+        /* Reset margin and padding for all elements */
+        *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+        }
+
+        /* Style the container */
+        .masonry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        padding: 16px;
+        }
+
+         /* Style the items */
+        .masonry-grid-item {
+        background-color: #f0f0f0;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        }
+
+        /* Add some height and width to the items for demonstration purposes */
+        img{
+        width:100%;
+        height: auto;
+        }
+
+        @media (max-width: 768px) {
+        .masonry-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="masonry-grid">
+        <div class="masonry-grid-item">
+            <img src="https://via.placeholder.com/500x300" alt="Image 1">
+        </div>
+        <div class="masonry-grid-item">
+            <img src="https://via.placeholder.com/400x450" alt="Image 2">
+        </div>
+        <div class="masonry-grid-item">
+            <img src="https://via.placeholder.com/350x280" alt="Image 3">
+        </div>
+       <!-- Add more items here -->
+    </div>
+</body>
+</html> 
